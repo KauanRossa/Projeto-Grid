@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --ff-: 'Epilogue';
+
+    --bg-back-: hsl(var(--hue), 22%,20%);
+
+    --hue: 250;
+
+    --fonts-color-: hsl(var(--hue), 0%, 100%);
+    --font-color-header: hsl(var(--hue), 50%, 80%);
+
+    font-size: 62.5%;
+}
+body{
+    font-family: var(--ff-);
+
+    background-color: var(--bg-back-);
+
+    color: var(--fonts-color-);
+}
+#page{
+    max-width: 33rem;
+
+    margin: 0 auto;
+}
+
+header{
+    margin: 10rem 0 8rem;
+
+    text-align: center;
+}
+header p{
+    color: var(--font-color-header);
+
+    font-family: var(--ff-);
+
+    text-transform: uppercase;
+
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+
+    margin-bottom: 1.7rem;
+}
+header h1{
+    font-family: var(--ff-);
+
+    font-weight: 800;
+    font-size: 4.0rem;
+    line-height: 4.8rem;
+}
+main{
+    display: grid;
+    gap: 3.2rem;
+
+    margin-bottom: 10.5rem;
+}
+main span{
+    color: var(--fonts-color-span);
+
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.card{
+    position: relative;
+
+    font-family: var(--ff-);
+
+    cursor: pointer;
+}
+.card img{
+    height: 41.6rem;
+    object-fit: cover;
+
+    border-radius: 0.6rem;
+}
+.card h2{
+    position: absolute;
+
+    bottom: 5.2rem;
+    left: 2.8rem;
+
+    font-weight: 800;
+    font-size: 4rem;
+    line-height: 4.8rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.3rem;
+}
+.card h2 span{
+    border-radius: 2rem;
+
+    padding: 0 1.6rem;
+
+    height: 3.8rem;
+
+    background-color: var(--fonts-color-);
+
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    font-weight: 40rem;
+
+    display: inline-flex;
+    align-items: center;
+
+    width: fit-content;
+
+    color: #090039;
+}
