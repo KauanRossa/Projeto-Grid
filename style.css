@@ -22,7 +22,7 @@ body{
 
     color: var(--fonts-color-);
 }
-#page{
+.page{
     max-width: 33rem;
 
     margin: 0 auto;
@@ -32,6 +32,8 @@ header{
     margin: 10rem 0 8rem;
 
     text-align: center;
+
+    animation: top 700ms ease-in-out;
 }
 header p{
     color: var(--font-color-header);
@@ -74,12 +76,25 @@ img{
     font-family: var(--ff-);
 
     cursor: pointer;
+
+    animation: down 700ms ease-in-out reverse;
+}
+.card img:hover{
+    transform: scale(1.1);
+
+    filter: brightness(1);
 }
 .card img{
     height: 41.6rem;
     object-fit: cover;
 
     border-radius: 0.6rem;
+
+    transition-property: all;
+    transition-duration: 600ms;
+
+
+    filter: brightness(0.8);
 }
 .card h2{
     position: absolute;
@@ -114,4 +129,54 @@ img{
     width: fit-content;
 
     color: #090039;
+}
+
+
+@keyframes top{
+    0%{
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes down{
+    100%{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+}
+
+@media (min-width: 700px){
+    .page{
+    max-width: 117rem;
+
+    padding: 0 5rem;
+    }
+    header h1{
+    font-size: 5.6rem;
+    font-family: 'Epilogue';
+    font-weight: 800;
+    line-height: 6.4rem;
+    letter-spacing: -0.1rem;
+    }
+    main{
+        grid-template-areas: "A B B"
+        "C C D";
+    }
+    main div:nth-child(1){
+        grid-area: A;
+    }
+    main div:nth-child(2){
+        grid-area: B;
+    }
+    main div:nth-child(3){
+        grid-area: C;
+    }
+    main div:nth-child(4){
+        grid-area: D;
+    }
 }
